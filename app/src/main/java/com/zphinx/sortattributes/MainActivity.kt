@@ -141,7 +141,7 @@ class MainActivity : AppCompatActivity(), SortProperty {
     /**
      * Sorts the list of object based on the sortIndex and the SortDirection
      */
-    fun fireSorter() {
+    private fun fireSorter() {
         Log.d(TAG,"Fireing sort algorithms...")
         Collections.sort(mSortables, SortComparator(sortIndex))
         if (sortDirection == com.zphinx.sortsearch.StateTextView.SORT_ASC) {
@@ -158,14 +158,14 @@ class MainActivity : AppCompatActivity(), SortProperty {
         context: Context?,
         resourceId: Int,
         textResourceId: Int,
-        options: ArrayList<com.zphinx.sortsearch.SortableImpl<Any>?>?
+        options: MutableList<com.zphinx.sortsearch.SortableImpl<Any>?>?
     ) : ArrayAdapter<com.zphinx.sortsearch.SortableImpl<Any>?>(
         context!!,
         resourceId,
         textResourceId,
         options!!
     ) {
-        private var options: ArrayList<com.zphinx.sortsearch.SortableImpl<Any>?>?
+        private var options: MutableList<com.zphinx.sortsearch.SortableImpl<Any>?>?
         /*
          * (non-Javadoc)
          *
@@ -213,17 +213,17 @@ class MainActivity : AppCompatActivity(), SortProperty {
             val userName: TextView = rowView.findViewById(R.id.user_name) as TextView
             userName.text = sorted.userName
             val numViews: TextView = rowView.findViewById(R.id.num_views) as TextView
-            numViews.text = "Views: " + (sorted.numberOfViews)
+            numViews.text = "Views:  ${sorted.numberOfViews}"
             val price: TextView = rowView.findViewById(R.id.price) as TextView
             price.text = "Price: $Double"
             Log.d(
                 TAG,
-                "setting up list index " + position + "with user name: " + userName.text
+                "setting up list index $position with user name:  ${userName.text}"
             )
             return rowView
         }
 
-        fun setOptions(options: ArrayList<com.zphinx.sortsearch.SortableImpl<Any>?>?) {
+        fun setOptions(options: MutableList<com.zphinx.sortsearch.SortableImpl<Any>?>?) {
             this.options = options
         }
 
@@ -257,6 +257,6 @@ class MainActivity : AppCompatActivity(), SortProperty {
         const val LIST_NUM = 10
 
         private val TAG: String? = MainActivity::class.java.simpleName
-        private var mSortables: ArrayList<com.zphinx.sortsearch.SortableImpl<Any>?>? = null
+        private var mSortables: MutableList<com.zphinx.sortsearch.SortableImpl<Any>?>? = null
     }
 }
