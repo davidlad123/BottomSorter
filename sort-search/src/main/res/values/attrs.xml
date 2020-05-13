@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="sortDirection">
+
+        <!-- name of the attribute that will be used in XML files -->
+        <!-- newest first, regulates sql AC and DESC, 1 is ascending 2 is desc -->
+        <attr name="state_sort_direction" format="integer">
+
+        </attr>
+    </declare-styleable>
+
+</resources>

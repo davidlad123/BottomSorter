@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="app_name">SortAttributes</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="searching_wait">Searching please wait..</string>
+    <string name="sort_search_results">Sort Search Results</string>
+
+    <string name="cancel_caps">CANCEL</string>
+    <string name="confirm_caps">CONFIRM</string>
+    <string name="title_caps">Title</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>

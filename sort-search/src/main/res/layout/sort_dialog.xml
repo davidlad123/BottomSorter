@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    app:cardElevation="@dimen/margin_4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="@dimen/margin_120dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialogTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_2dp"
+                android:background="@drawable/rect_grey_blue"
+                android:gravity="center"
+                android:padding="@dimen/margin_4dp"
+                android:text="@string/title_caps"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dialog_title_text_size"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/sort_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/margin_120dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_margin="@dimen/margin_8dp"
+            android:background="#CCCCCC" />
+
+        <LinearLayout
+            android:id="@+id/buttonbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_8dp">
+
+            <Button
+                android:id="@+id/negative_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_3dp"
+
+                android:minHeight="@dimen/margin_1dp"
+                android:text="@string/cancel_caps"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/dialog_title_text_size" />
+
+            <Button
+                android:id="@+id/positive_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_3dp"
+                android:layout_marginLeft="@dimen/margin_3dp"
+                android:layout_marginBottom="@dimen/margin_3dp"
+                android:minHeight="@dimen/margin_1dp"
+                android:text="@string/ok"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/dialog_title_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

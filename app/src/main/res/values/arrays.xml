@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="searchSortValues">
+        <item>Modification Date</item>
+        <item>Last Login Date </item>
+        <item>User Name</item>
+        <item>Most Viewed</item>
+        <item>Price</item>
+    </string-array>
+
+</resources>

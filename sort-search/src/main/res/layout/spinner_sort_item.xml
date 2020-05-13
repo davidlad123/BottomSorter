@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinner_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:scrollHorizontally="true"
+    android:singleLine="true"
+    android:text="@string/sort_search_results"
+    android:textColor="#BDBDBD"
+    android:textIsSelectable="false"
+    android:textSize="@dimen/dialog_title_text_size"
+    android:textStyle="bold"
+    android:drawableRight="@drawable/oval_grey_blue">
+
+</TextView> <!-- android:drawableRight="@drawable/spinner_ab_focused_leta" -->
