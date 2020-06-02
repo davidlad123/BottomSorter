@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.zphinx.sortsearch.SortDialogManager
 import com.zphinx.sortsearch.SortProperty
 
 import java.util.*
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity(), SortProperty {
     private fun initButton() {
         mSortButton = findViewById<Button>(R.id.btnSortSearch)
         mSortButton?.setOnClickListener {
-            val sm = com.zphinx.sortsearch.SortDialogManager()
+            val sm = SortDialogManager()
             sm.showAlertDialog(this@MainActivity) { fireSorter() }
 
         }

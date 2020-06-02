@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.sort_dialog.*
 
 /**
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.sort_dialog.*
  * @property negativeFunction Function0<Unit>
  * @property listView ListView
  */
-class SortDialogFragment : androidx.fragment.app.DialogFragment() {
+class SortDialogFragment : BottomSheetDialogFragment() {
 
     private lateinit var title: String
     private lateinit var positionButton: String
@@ -98,25 +99,20 @@ class SortDialogFragment : androidx.fragment.app.DialogFragment() {
             t: String,
             positionButton: String,
             negativeButton: String,
-            isTwoButton: Boolean,
             canCancel: Boolean,
             positiveFunction: () -> Unit,
             negativeFunction: () -> Unit,
-            bundle: Bundle? = null,
             someAdapter: SortDialogManager.SortAdapter
         ): SortDialogFragment {
             val f = SortDialogFragment()
-            var args = bundle
-            if (args == null) {
-                args = Bundle()
-                args.run {
+            val args  = Bundle().apply{
                     putString("title", t)
                     putString("positionButton", positionButton)
                     putString("negativeButton", negativeButton)
-                    putBoolean("isTwoButton", isTwoButton)
+                    putBoolean("isTwoButton", negativeButton!=null)
                     putBoolean("canCancel", canCancel)
                 }
-            }
+
             f.arguments = args
             f.adapter = someAdapter
             f.positiveFunction = positiveFunction
