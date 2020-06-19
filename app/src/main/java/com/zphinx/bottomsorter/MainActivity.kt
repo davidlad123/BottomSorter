@@ -1,4 +1,4 @@
-package com.zphinx.sortattributes
+package com.zphinx.bottomsorter
 
 import android.content.Context
 import android.os.Bundle
